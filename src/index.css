@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif-elite: "Playfair Display", "Cinzel", "Georgia", serif;
+  --font-sans-elite: "Inter", system-ui, -apple-system, sans-serif;
+  --font-cinzel: "Cinzel", serif;
+}
+
+/* Custom Damask background texture for luxury feeling */
+.damask-pattern {
+  position: relative;
+}
+
+.damask-pattern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  opacity: 0.12; /* Subtle pattern */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M60 10C50 10 40 20 40 35c0 15 15 25 20 30 5-5 20-15 20-30 0-15-10-25-20-25zm0 10c5 0 10 5 10 15 0 8-8 15-10 18-2-3-10-10-10-18 0-10 5-15 10-15zM20 70c0-10 10-20 20-20 5 0 9 2 12 5-3 5-5 11-5 17 0 2 .1 4 .4 6H20v-8zm80 0h-27.4c.3-2 .4-4 .4-6 0-6-2-12-5-17 3-3 7-5 12-5 10 0 20 10 20 20v8zM60 85c-15 0-30 10-30 25h60c0-15-15-25-30-25z' fill='%23D4AF37' fill-opacity='0.4'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Custom keyframes for premium animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes float-reverse {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.45);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 7s ease-in-out infinite;
+}
+
+.glow-gold {
+  animation: pulse-gold 4s ease-in-out infinite;
+}
+
+/* Custom styled scrollbars for luxury theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A141A;
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}

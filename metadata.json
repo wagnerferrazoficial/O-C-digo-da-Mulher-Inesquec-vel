@@ -1,0 +1,6 @@
+{
+  "name": "Mulher Inesquecível",
+  "description": "Página de destino de alta conversão e elite para o método Mulher Inesquecível.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
